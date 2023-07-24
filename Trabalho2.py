@@ -37,11 +37,11 @@ line['bairro'] = b.fit_transform(line['bairro'])
 print(line.T)
 
 imp = SimpleImputer(strategy='most_frequent')
-line = imp.fit_transform(x)
+line = imp.fit_transform(line)
 
 StdSc = StandardScaler()
-StdSc = StdSc.fit(x)
-line = StdSc.transform(x)
+StdSc = StdSc.fit(line)
+line = StdSc.transform(line)
 
 testeLine = teste.drop(columns = 
               ['diferenciais',
